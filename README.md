@@ -3,7 +3,9 @@
 This project demonstrates a stunning **scroll effect** using the CSS `clip-path` property. The effect combines `position: fixed`, `absolute`, and `relative` to create a seamless clipped section transition that's perfect for modern web design.
 
 ## Demo
-[Live Demo](https://yt-pixelperfectlabs.github.io/css-clip-scroll/)
+[Live Demo-1](https://yt-pixelperfectlabs.github.io/css-clip-scroll/demo-1/)
+
+[Live Demo-2](https://yt-pixelperfectlabs.github.io/css-clip-scroll/demo-2/)
 
 ---
 
