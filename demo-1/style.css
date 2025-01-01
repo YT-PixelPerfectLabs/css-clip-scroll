@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the entire height is used for the document */
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section wrapper with counter reset */
+.section-wrapper {
+  counter-reset: section-count;
+  position: relative;
+  height: 100%;
+}
+
+/* Base styles for sections */
+.section {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Light Section Styles */
+.light-section {
+  background-color: #fff;
+  color: #202125;
+}
+
+/* Dark Section Styles */
+.dark-section {
+  background-color: #202125;
+  color: #c92020;
+}
+
+/* Color Section Styles */
+.color-section {
+  background-color: #d5f8ef;
+  color: #14b789;
+}
+
+/* Section heading styling */
+.section-heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* Section image styling */
+.section-image {
+  width: 40vmin;
+  min-width: 15rem;
+  max-width: 40vh;
+}
+
+/* Image inside section image */
+.section-image img {
+  max-width: 100%;
+}
+
+/* Button base styles */
+.section-btn {
+  min-width: 16rem;
+  padding: 1em 1.6em;
+  letter-spacing: 0.26em;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid #202125;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* Button styles specific to light section */
+.light-section .section-btn {
+  color: #202125;
+  border-color: #202125;
+}
+
+/* Button styles specific to dark section */
+.dark-section .section-btn {
+  color: #c92020;
+  border-color: #c92020;
+}
+
+/* Button styles specific to color section */
+.color-section .section-btn {
+  color: #14b789;
+  border-color: #14b789;
+}
+
+/* Flex section-container for content alignment within sections */
+.section-container {
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-clip-path: inset(0px 0px 0px 0px);
+  clip-path: inset(0px 0px 0px 0px);
+}
+
+.section-inner {
+  position: fixed;
+  inset: 0%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Styling for the counter circle */
+.section-inner:before {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  counter-increment: section-count;
+  content: "" counter(section-count) "";
+}
+
+/* Counter circle specific to light section */
+.light-section .section-inner:before {
+  background-color: #202125;
+  color: #fff;
+}
+
+/* Counter circle specific to dark section */
+.dark-section .section-inner:before {
+  background-color: #c92020;
+  color: #202125;
+}
+
+/* Counter circle specific to color section */
+.color-section .section-inner:before {
+  background-color: #14b789;
+  color: #d5f8ef;
+}
